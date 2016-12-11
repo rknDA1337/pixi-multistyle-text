@@ -214,7 +214,7 @@ MultiStyleText.prototype.updateText = function()
             lineWidth += outputTextData[i][j].width;
 
             // save the font properties
-            outputTextData[i][j].fontProperties = this.determineFontProperties(outputTextData[i][j].style.font);
+            outputTextData[i][j].fontProperties = PIXI.Text.calculateFontProperties(outputTextData[i][j].style.font);
 
             // save the height
             outputTextData[i][j].height = outputTextData[i][j].fontProperties.fontSize + outputTextData[i][j].style.strokeThickness;
